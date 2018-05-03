@@ -167,16 +167,16 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4100</DriverSelection>
+            <DriverSelection>4107</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
 <<<<<<< HEAD
 <<<<<<< HEAD
-          <Flash3></Flash3>
+<<<<<<< HEAD
 =======
-          <Flash3>"" ()</Flash3>
->>>>>>> parent of 9a1b39c... Revert "03.05.18"
+>>>>>>> parent of c09aeb8... re
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -355,7 +355,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>4</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -424,15 +424,16 @@
             </File>
           </Files>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               
             </File></Files>
 >>>>>>> parent of ba92dd5... 1
+=======
+>>>>>>> parent of c09aeb8... re
         </Group>
 		<Group>
           <GroupName>::CMSIS</GroupName>
-=======
->>>>>>> parent of 9a1b39c... Revert "03.05.18"
         </Group>
  <Group>
           <GroupName>Middlewares/FreeRTOS</GroupName>
@@ -592,34 +593,6 @@
               <FilePath>../Src/stm32f4xx_it.c</FilePath>
 <<<<<<< HEAD
             </File>
-<<<<<<< HEAD
-=======
-            <File>
-              <FileName>ADC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\ADC.c</FilePath>
-            </File>
-            <File>
-              <FileName>FLASH.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\FLASH.c</FilePath>
-            </File>
-            <File>
-              <FileName>PAGE.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\PAGE.c</FilePath>
-            </File>
-            <File>
-              <FileName>TFT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\TFT.c</FilePath>
-            </File>
-            <File>
-              <FileName>THYRISTORS.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\THYRISTORS.c</FilePath>
-            </File>
->>>>>>> parent of 9a1b39c... Revert "03.05.18"
           </Files>
         </Group>
         <Group>
@@ -640,12 +613,6 @@
             </File>
           </Files>
         </Group>
-<<<<<<< HEAD
-=======
-        <Group>
-          <GroupName>::CMSIS</GroupName>
-        </Group>
->>>>>>> parent of 9a1b39c... Revert "03.05.18"
       </Groups>
 =======
               
