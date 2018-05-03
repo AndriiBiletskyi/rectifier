@@ -69,6 +69,9 @@ osThreadId lcdHandle;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
+volatile char version[] = "Ver 12.12 adc+pi";
+struct variables TJCTM;
+struct analog_inputs AIN1;
 
 /* USER CODE END PV */
 
@@ -93,7 +96,7 @@ void pages_show(void const * argument);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-
+void _show_page(const struct variables *disp);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -104,7 +107,40 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+	TJCTM.regum 				= 0;
+	TJCTM._page 				= 1;
+	TJCTM._transfor			= 1;
+	TJCTM._blink				= 0;
+	TJCTM._synchro			= 0;
+	TJCTM._input				= 0;
+	TJCTM._output				= 0;
+	TJCTM._pi						= 1;
+	TJCTM._t1_current 	= 0;
+	TJCTM._t2_current 	= 0;
+	TJCTM._t3_current 	= 0;
+	TJCTM._t4_current 	= 0;
+	TJCTM._shunt				= 1;
+	TJCTM._posled				= 0;
+	TJCTM._posled_paral = 0;
+	TJCTM._paral				= 0;
+	TJCTM._enable				= 1;
+	TJCTM.PID 					= 0;
+	TJCTM.Error					= 0;
+	TJCTM.Integral			= 0;
+	TJCTM.Kp						= 10;
+	TJCTM.Ki						= 10;
+	TJCTM.MAX_Ki				= 6666;
+	TJCTM.Integralmax		= 667;
+	TJCTM._tr_alarm 		= 0;
+	TJCTM._t1_current_lcd = 0;
+	TJCTM._t2_current_lcd = 0;
+	TJCTM._t3_current_lcd = 0;
+	TJCTM._t4_current_lcd = 0;
+	TJCTM.shunt_lcd				= 0;
+	TJCTM.task_lcd				= 0;
+	TJCTM.alfa_lcd				=	0;
+	TJCTM.reset 					= 1;
+	TJCTM.count_reset 		= 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -748,7 +784,43 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+//----------------------------------------------------------------------------------------------------------
+void _show_page(const struct variables *disp)
+{
+	LCD_Page(disp->_page);
+	switch(disp->_page){
+	case READY:
 
+		break;
+	case ALARM:LCD_Alarm(disp->_tr_alarm);
+
+		break;
+	case INPUT:LCD_Input(disp->_input);
+
+		break;
+	case OUTPUT:LCD_Output(disp->_output);
+
+		break;
+	case TRANSFORMS:LCD_Transforms(disp->_transfor,disp->_t1_current,disp->_t2_current,disp->_t3_current,disp->_t4_current,disp->_blink,disp->_tr_alarm);
+
+		break;
+	case SHUNT:LCD_Transforms_setting(disp->_shunt,disp->_posled,disp->_posled_paral,disp->_paral,disp->_blink);
+
+		break;
+	case SYNCHRONIZATION:LCD_Synchro(disp->_synchro,disp->_blink);
+
+		break;
+	case _PI:LCD_PI(disp->_pi,disp->Kp,disp->Ki,disp->_blink);
+
+		break;
+	case VAR:LCD_Current(disp->_t1_current_lcd,disp->_t2_current_lcd,disp->_t3_current_lcd,disp->_t4_current_lcd,disp->shunt_lcd,disp->task_lcd,disp->alfa_lcd,disp->_enable,disp->_tr_alarm,disp->regum,disp->count_reset);
+
+		break;
+	}
+}
+//----------------------------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------------------------
 /* USER CODE END 4 */
 
 /* StartDefaultTask function */
@@ -771,6 +843,7 @@ void pages_show(void const * argument)
   /* Infinite loop */
   for(;;)
   {
+		_show_page(&TJCTM);
     osDelay(1);
   }
   /* USER CODE END pages_show */

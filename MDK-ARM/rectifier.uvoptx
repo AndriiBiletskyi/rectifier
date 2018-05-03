@@ -77,7 +77,11 @@
         <tvExpOptDlg>0</tvExpOptDlg>
         <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
+<<<<<<< HEAD
       <CpuCode>0</CpuCode>
+=======
+      <CpuCode>18</CpuCode>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <Books>
         <Book>
           <Number>0</Number>
@@ -211,7 +215,11 @@
 
   <Group>
     <GroupName>Drivers/CMSIS</GroupName>
+<<<<<<< HEAD
     <tvExp>0</tvExp>
+=======
+    <tvExp>1</tvExp>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -230,6 +238,7 @@
   </Group>
 
   <Group>
+<<<<<<< HEAD
     <GroupName>::CMSIS</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
@@ -238,13 +247,19 @@
   </Group>
 
   <Group>
+=======
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
     <GroupName>Middlewares/FreeRTOS</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
+<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
+=======
+      <GroupNumber>2</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>2</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -256,7 +271,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
+=======
+      <GroupNumber>2</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>3</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -268,7 +287,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
+=======
+      <GroupNumber>2</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>4</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -280,7 +303,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
+=======
+      <GroupNumber>2</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>5</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -292,7 +319,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
+=======
+      <GroupNumber>2</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>6</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -304,7 +335,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
+=======
+      <GroupNumber>2</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>7</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -316,7 +351,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
+=======
+      <GroupNumber>2</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>8</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -328,7 +367,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
+=======
+      <GroupNumber>2</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>9</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -340,7 +383,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
+=======
+      <GroupNumber>2</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>10</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -360,7 +407,11 @@
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>11</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -372,7 +423,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>12</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -384,7 +439,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>13</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -396,7 +455,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>14</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -408,7 +471,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>15</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -420,7 +487,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>16</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -432,7 +503,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>17</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -444,7 +519,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>18</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -456,7 +535,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>19</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -468,7 +551,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>20</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -480,7 +567,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>21</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -492,7 +583,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>22</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -504,7 +599,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>23</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -516,7 +615,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>24</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -528,7 +631,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>25</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -548,7 +655,11 @@
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
+<<<<<<< HEAD
       <GroupNumber>5</GroupNumber>
+=======
+      <GroupNumber>4</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>26</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -560,7 +671,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>5</GroupNumber>
+=======
+      <GroupNumber>4</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>27</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -572,7 +687,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>5</GroupNumber>
+=======
+      <GroupNumber>4</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>28</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -584,7 +703,11 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>5</GroupNumber>
+=======
+      <GroupNumber>4</GroupNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileNumber>29</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -595,6 +718,69 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+<<<<<<< HEAD
+=======
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>30</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Src\ADC.c</PathWithFileName>
+      <FilenameWithoutPath>ADC.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>31</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Src\FLASH.c</PathWithFileName>
+      <FilenameWithoutPath>FLASH.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>32</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Src\PAGE.c</PathWithFileName>
+      <FilenameWithoutPath>PAGE.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>33</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Src\TFT.c</PathWithFileName>
+      <FilenameWithoutPath>TFT.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>34</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Src\THYRISTORS.c</PathWithFileName>
+      <FilenameWithoutPath>THYRISTORS.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
   </Group>
 
   <Group>
@@ -604,8 +790,13 @@
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
+<<<<<<< HEAD
       <GroupNumber>6</GroupNumber>
       <FileNumber>30</FileNumber>
+=======
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>35</FileNumber>
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -617,4 +808,15 @@
     </File>
   </Group>
 
+<<<<<<< HEAD
+=======
+  <Group>
+    <GroupName>::CMSIS</GroupName>
+    <tvExp>0</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>1</RteFlg>
+  </Group>
+
+>>>>>>> parent of 9a1b39c... Revert "03.05.18"
 </ProjectOpt>
