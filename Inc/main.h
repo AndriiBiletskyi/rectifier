@@ -4,39 +4,29 @@
   * Description        : This file contains the common defines of the application
   ******************************************************************************
   *
-  * Copyright (c) 2018 STMicroelectronics International N.V. 
-  * All rights reserved.
+  * COPYRIGHT(c) 2017 STMicroelectronics
   *
-  * Redistribution and use in source and binary forms, with or without 
-  * modification, are permitted, provided that the following conditions are met:
+  * Redistribution and use in source and binary forms, with or without modification,
+  * are permitted provided that the following conditions are met:
+  *   1. Redistributions of source code must retain the above copyright notice,
+  *      this list of conditions and the following disclaimer.
+  *   2. Redistributions in binary form must reproduce the above copyright notice,
+  *      this list of conditions and the following disclaimer in the documentation
+  *      and/or other materials provided with the distribution.
+  *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  *      may be used to endorse or promote products derived from this software
+  *      without specific prior written permission.
   *
-  * 1. Redistribution of source code must retain the above copyright notice, 
-  *    this list of conditions and the following disclaimer.
-  * 2. Redistributions in binary form must reproduce the above copyright notice,
-  *    this list of conditions and the following disclaimer in the documentation
-  *    and/or other materials provided with the distribution.
-  * 3. Neither the name of STMicroelectronics nor the names of other 
-  *    contributors to this software may be used to endorse or promote products 
-  *    derived from this software without specific written permission.
-  * 4. This software, including modifications and/or derivative works of this 
-  *    software, must execute solely and exclusively on microcontroller or
-  *    microprocessor devices manufactured by or for STMicroelectronics.
-  * 5. Redistribution and use of this software other than as permitted under 
-  *    this license is void and will automatically terminate your rights under 
-  *    this license. 
-  *
-  * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
-  * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
-  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
-  * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
-  * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT 
-  * SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-  * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-  * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
-  * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
-  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
-  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
-  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   *
   ******************************************************************************
   */
@@ -46,11 +36,15 @@
   /* Includes ------------------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
-
+#include "stm32f4xx.h"
+#include "string.h"
+#include "PAGE.h"
+#include "THYRISTORS.h"
+#include "FLASH.h"
+#include "ADC.h"
 /* USER CODE END Includes */
 
 /* Private define ------------------------------------------------------------*/
-
 #define AM0_Pin GPIO_PIN_0
 #define AM0_GPIO_Port GPIOC
 #define AM1_Pin GPIO_PIN_2
@@ -136,7 +130,45 @@
 #define ADB9_Pin GPIO_PIN_9
 #define ADB9_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
+//----------------------------------------------------------------------------------------------------------
+#define FREQ			180
+#define FREQ_APB1 90
+//----------------------------------------------------------------------------------------------------------
 
+
+
+#define INT_S1			(GPIOG->IDR & GPIO_PIN_15) == (uint32_t)GPIO_PIN_RESET
+#define INT_S2			(GPIOG->IDR & GPIO_PIN_14) == (uint32_t)GPIO_PIN_RESET
+#define INT_S3			(GPIOG->IDR & GPIO_PIN_13) == (uint32_t)GPIO_PIN_RESET
+#define INT_S4			(GPIOG->IDR & GPIO_PIN_12) == (uint32_t)GPIO_PIN_RESET
+#define INT_S5			(GPIOG->IDR & GPIO_PIN_11) == (uint32_t)GPIO_PIN_RESET
+#define INT_S6			(GPIOG->IDR & GPIO_PIN_10) == (uint32_t)GPIO_PIN_RESET
+#define INT_S7			(GPIOG->IDR & GPIO_PIN_9)  == (uint32_t)GPIO_PIN_RESET
+#define INT_S8			(GPIOA->IDR & GPIO_PIN_15) == (uint32_t)GPIO_PIN_RESET
+//-------------------------------------------------------------
+#define BUTTON_UP		 (GPIOA->IDR & GPIO_PIN_3) == (uint32_t)GPIO_PIN_RESET//UP
+#define BUTTON_DOWN	 (GPIOA->IDR & GPIO_PIN_4) == (uint32_t)GPIO_PIN_RESET//DOWN
+#define BUTTON_LEFT	 (GPIOA->IDR & GPIO_PIN_5) == (uint32_t)GPIO_PIN_RESET//LEFT
+#define BUTTON_RIGHT (GPIOA->IDR & GPIO_PIN_6) == (uint32_t)GPIO_PIN_RESET//RIGHT
+#define BUTTON_OK		 (GPIOA->IDR & GPIO_PIN_8) == (uint32_t)GPIO_PIN_RESET//OK
+#define BUTTON_CLEAR (GPIOC->IDR & GPIO_PIN_9) == (uint32_t)GPIO_PIN_RESET//CLEAR
+//-------------------------------------------------------------
+#define _t_current_min	0//minimalnbly tok transformatorov
+#define _t_current_max	50000//maximalnbly tok transformatorov
+#define _k_min					0//minimalnbly k
+#define _k_max					10000//maximalnbly k
+//-------------------------------------------------------------
+
+//-------------------------------------------------------------
+#define	OUT_1_0					GPIOG->BSRR = (uint32_t)GPIO_PIN_7 << 16U;
+#define	OUT_1_1					GPIOG->BSRR = GPIO_PIN_7;
+#define	OUT_2_0					GPIOG->BSRR = (uint32_t)GPIO_PIN_6 << 16U;
+#define	OUT_2_1					GPIOG->BSRR = GPIO_PIN_6;
+#define	OUT_3_0					GPIOG->BSRR = (uint32_t)GPIO_PIN_5 << 16U;
+#define	OUT_3_1					GPIOG->BSRR = GPIO_PIN_5;
+#define	OUT_4_0					GPIOG->BSRR = (uint32_t)GPIO_PIN_4 << 16U;
+#define	OUT_4_1					GPIOG->BSRR = GPIO_PIN_4;
+//-------------------------------------------------------------
 /* USER CODE END Private defines */
 
 /**
